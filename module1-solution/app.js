@@ -6,16 +6,17 @@ angular.module('LunchCheck', [])
 
 LunchCheckController.$inject = ['$scope'];
 function LunchCheckController($scope) {
-    
+
     $scope.checkList = function () {
-    if ( typeof($scope.list) == "undefined" || $scope.list == "" ) {
-      $scope.message = "Please enter data first";
-      $scope.color = "red";
-    } else {
-      var elements = getElements($scope.list);
-      checkElements(elements);
-    }
-  };
+      if ( typeof($scope.list) == "undefined" || $scope.list == "" ) {
+        $scope.message = "Please enter data first";
+        $scope.color = "red";
+      } else {
+        var elements = getElements($scope.list);
+        checkElements(elements);
+      }
+    };
+
 
   function checkElements(array) {
     // Checks elements array lenght

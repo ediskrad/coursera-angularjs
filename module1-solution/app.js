@@ -6,9 +6,11 @@ angular.module('LunchCheck', [])
 
 LunchCheckController.$inject = ['$scope'];
 function LunchCheckController($scope) {
+    
     $scope.checkList = function () {
     if ( typeof($scope.list) == "undefined" || $scope.list == "" ) {
       $scope.message = "Please enter data first";
+      $scope.color = "red";
     } else {
       var elements = getElements($scope.list);
       checkElements(elements);
@@ -23,6 +25,7 @@ function LunchCheckController($scope) {
     } else {
       $scope.message = "Too much!";
     }
+    $scope.color = "green";
   }
 
   function getElements(string) {

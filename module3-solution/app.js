@@ -7,6 +7,7 @@ angular.module('NarrowItDownApp', [])
 .directive('foundItems', FoundItemsDirective)
 .constant('ApiBasePath', "https://davids-restaurant.herokuapp.com");
 
+// Use HTTPS!
 
 NarrowItDownController.$inject = ['MenuSearchService'];
 function NarrowItDownController(MenuSearchService) {

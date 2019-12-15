@@ -5,7 +5,7 @@ angular.module('NarrowItDownApp', [])
 .controller('NarrowItDownController', NarrowItDownController)
 .service('MenuSearchService', MenuSearchService)
 .directive('foundItems', FoundItemsDirective)
-.constant('ApiBasePath', "http://davids-restaurant.herokuapp.com");
+.constant('ApiBasePath', "https://davids-restaurant.herokuapp.com");
 
 
 NarrowItDownController.$inject = ['MenuSearchService'];
@@ -44,7 +44,6 @@ function FoundItemsDirective() {
     controllerAs: 'finder',
     bindToController: true
   };
-
   return ddo;
 }
 
@@ -87,7 +86,6 @@ function MenuSearchService($http, ApiBasePath) {
   };
 
   service.clear = function() {
-    // foundItems.splice(0, foundItems.length);
     foundItems = [];
   }
 

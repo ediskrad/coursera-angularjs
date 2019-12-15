@@ -87,7 +87,7 @@ function MenuSearchService($http, ApiBasePath) {
   };
 
   service.clear = function() {
-    foundItems = [];
+    foundItems.splice(0, foundItems.length);
   }
 
   service.removeItem = function(itemIndex) {

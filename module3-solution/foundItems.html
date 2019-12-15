@@ -1,0 +1,8 @@
+<ul>
+  <li ng-repeat="item in finder.items">
+
+    {{ item.name }}, {{ item.short_name }}, {{item.description }}
+    <button ng-click="finder.onRemove({index: $index});">Clear this one!</button>
+  </li>
+</ul>
+<div ng-if="finder.isEmpty()">Nothing found.</div>
